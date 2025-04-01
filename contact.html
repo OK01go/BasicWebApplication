@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domino's Pizza - Contact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='restaurant.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ffcc00;
+            transition: color 0.3s ease-in-out;
+        }
+
+        h1:hover {
+            color: #ff6600;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            background: rgba(255, 0, 0, 0.7);
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #ffcc00;
+            color: black;
+        }
+
+        main {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            width: 50%;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            color: #ffcc00;
+            margin-bottom: 15px;
+        }
+
+        .social-media {
+            margin-top: 30px;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            margin: 10px;
+        }
+
+        .social-media a:hover {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                <li><a href="{{ url_for('order') }}">Order</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>Email: <a href="mailto:contact@dominos.com">contact@dominos.com</a></p>
+            <p>Phone: <a href="tel:+123456789">+123456789</a></p>
+            <p>Address: 123 Pizza Street, Domino City, Foodland</p>
+            <p>Business Hours: 10 AM - 11 PM, Daily</p>
+        </div>
+
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com/dominos" target="_blank">Facebook</a>
+            <a href="https://twitter.com/dominos" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/dominos" target="_blank">Instagram</a>
+        </div>
+    </main>
+</body>
+</html>
